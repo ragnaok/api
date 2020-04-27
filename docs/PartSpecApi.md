@@ -1,6 +1,6 @@
 # Api.PartSpecApi
 
-All URIs are relative to *http://localhost:5000*
+All URIs are relative to *https://api-dev-hst.hylink.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## getPartSpec
 
-> PartSpecResponseBody getPartSpec(version, specId)
+> PartSpecResponse getPartSpec(version, specId)
 
 
 
@@ -19,29 +19,27 @@ Get a part spec
 ### Example
 
 ```javascript
-var Api = require('api');
-var defaultClient = Api.ApiClient.instance;
+import Api from 'api';
+let defaultClient = Api.ApiClient.instance;
 // Configure API key authorization: Authorization
-var Authorization = defaultClient.authentications['Authorization'];
+let Authorization = defaultClient.authentications['Authorization'];
 Authorization.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Authorization.apiKeyPrefix = 'Token';
 
-var apiInstance = new Api.PartSpecApi();
-var version = "version_example"; // String | api version
-var specId = "specId_example"; // String | spec id
-var callback = function(error, data, response) {
+let apiInstance = new Api.PartSpecApi();
+let version = "version_example"; // String | api version
+let specId = "specId_example"; // String | spec id
+apiInstance.getPartSpec(version, specId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getPartSpec(version, specId, callback);
+});
 ```
 
 ### Parameters
-
 
 
 Name | Type | Description  | Notes
@@ -51,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PartSpecResponseBody**](PartSpecResponseBody.md)
+[**PartSpecResponse**](PartSpecResponse.md)
 
 ### Authorization
 

@@ -1,6 +1,6 @@
 # Api.PartApi
 
-All URIs are relative to *http://localhost:5000*
+All URIs are relative to *https://api-dev-hst.hylink.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## createPart
 
-> PartResponseBody createPart(version, body)
+> PartResponse createPart(version, body)
 
 
 
@@ -19,39 +19,37 @@ Create part
 ### Example
 
 ```javascript
-var Api = require('api');
-var defaultClient = Api.ApiClient.instance;
+import Api from 'api';
+let defaultClient = Api.ApiClient.instance;
 // Configure API key authorization: Authorization
-var Authorization = defaultClient.authentications['Authorization'];
+let Authorization = defaultClient.authentications['Authorization'];
 Authorization.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Authorization.apiKeyPrefix = 'Token';
 
-var apiInstance = new Api.PartApi();
-var version = "version_example"; // String | api version
-var body = new Api.PartRequestBody(); // PartRequestBody | create part body parameters
-var callback = function(error, data, response) {
+let apiInstance = new Api.PartApi();
+let version = "version_example"; // String | api version
+let body = new Api.PartRequest(); // PartRequest | create part body parameters
+apiInstance.createPart(version, body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.createPart(version, body, callback);
+});
 ```
 
 ### Parameters
 
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **version** | **String**| api version | 
- **body** | [**PartRequestBody**](PartRequestBody.md)| create part body parameters | 
+ **body** | [**PartRequest**](PartRequest.md)| create part body parameters | 
 
 ### Return type
 
-[**PartResponseBody**](PartResponseBody.md)
+[**PartResponse**](PartResponse.md)
 
 ### Authorization
 

@@ -1,6 +1,6 @@
 # Api.QwicBikeApi
 
-All URIs are relative to *http://localhost:5000*
+All URIs are relative to *https://api-dev-hst.hylink.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -21,35 +21,33 @@ Compare a qwic bike
 ### Example
 
 ```javascript
-var Api = require('api');
-var defaultClient = Api.ApiClient.instance;
+import Api from 'api';
+let defaultClient = Api.ApiClient.instance;
 // Configure API key authorization: Authorization
-var Authorization = defaultClient.authentications['Authorization'];
+let Authorization = defaultClient.authentications['Authorization'];
 Authorization.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Authorization.apiKeyPrefix = 'Token';
 
-var apiInstance = new Api.QwicBikeApi();
-var version = "version_example"; // String | api version
-var body = new Api.CompareBikeRequestBody(); // CompareBikeRequestBody | compare qwic bike body parameters
-var callback = function(error, data, response) {
+let apiInstance = new Api.QwicBikeApi();
+let version = "version_example"; // String | api version
+let body = new Api.CompareBikeRequest(); // CompareBikeRequest | compare qwic bike body parameters
+apiInstance.compareQwicBike(version, body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.compareQwicBike(version, body, callback);
+});
 ```
 
 ### Parameters
 
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **version** | **String**| api version | 
- **body** | [**CompareBikeRequestBody**](CompareBikeRequestBody.md)| compare qwic bike body parameters | 
+ **body** | [**CompareBikeRequest**](CompareBikeRequest.md)| compare qwic bike body parameters | 
 
 ### Return type
 
@@ -76,35 +74,33 @@ Create a qwic bike
 ### Example
 
 ```javascript
-var Api = require('api');
-var defaultClient = Api.ApiClient.instance;
+import Api from 'api';
+let defaultClient = Api.ApiClient.instance;
 // Configure API key authorization: Authorization
-var Authorization = defaultClient.authentications['Authorization'];
+let Authorization = defaultClient.authentications['Authorization'];
 Authorization.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Authorization.apiKeyPrefix = 'Token';
 
-var apiInstance = new Api.QwicBikeApi();
-var version = "version_example"; // String | api version
-var body = new Api.CreateBikeRequestBody(); // CreateBikeRequestBody | create qwic bike body parameters
-var callback = function(error, data, response) {
+let apiInstance = new Api.QwicBikeApi();
+let version = "version_example"; // String | api version
+let body = new Api.CreateBikeRequest(); // CreateBikeRequest | create qwic bike body parameters
+apiInstance.createQwicBike(version, body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.createQwicBike(version, body, callback);
+});
 ```
 
 ### Parameters
 
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **version** | **String**| api version | 
- **body** | [**CreateBikeRequestBody**](CreateBikeRequestBody.md)| create qwic bike body parameters | 
+ **body** | [**CreateBikeRequest**](CreateBikeRequest.md)| create qwic bike body parameters | 
 
 ### Return type
 
@@ -131,29 +127,27 @@ Get a qwic bike model
 ### Example
 
 ```javascript
-var Api = require('api');
-var defaultClient = Api.ApiClient.instance;
+import Api from 'api';
+let defaultClient = Api.ApiClient.instance;
 // Configure API key authorization: Authorization
-var Authorization = defaultClient.authentications['Authorization'];
+let Authorization = defaultClient.authentications['Authorization'];
 Authorization.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Authorization.apiKeyPrefix = 'Token';
 
-var apiInstance = new Api.QwicBikeApi();
-var version = "version_example"; // String | api version
-var vin = "vin_example"; // String | frame number
-var callback = function(error, data, response) {
+let apiInstance = new Api.QwicBikeApi();
+let version = "version_example"; // String | api version
+let vin = "vin_example"; // String | frame number
+apiInstance.getQwicBikeModel(version, vin, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getQwicBikeModel(version, vin, callback);
+});
 ```
 
 ### Parameters
-
 
 
 Name | Type | Description  | Notes

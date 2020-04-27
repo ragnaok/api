@@ -1,6 +1,6 @@
 # Api.BikeApi
 
-All URIs are relative to *http://localhost:5000*
+All URIs are relative to *https://api-dev-hst.hylink.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,35 +19,33 @@ Create a bike
 ### Example
 
 ```javascript
-var Api = require('api');
-var defaultClient = Api.ApiClient.instance;
+import Api from 'api';
+let defaultClient = Api.ApiClient.instance;
 // Configure API key authorization: Authorization
-var Authorization = defaultClient.authentications['Authorization'];
+let Authorization = defaultClient.authentications['Authorization'];
 Authorization.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Authorization.apiKeyPrefix = 'Token';
 
-var apiInstance = new Api.BikeApi();
-var version = "version_example"; // String | api version
-var body = new Api.CreateBikeRequestBody(); // CreateBikeRequestBody | create bike body parameters
-var callback = function(error, data, response) {
+let apiInstance = new Api.BikeApi();
+let version = "version_example"; // String | api version
+let body = new Api.CreateBikeRequest(); // CreateBikeRequest | create bike body parameters
+apiInstance.createBike(version, body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.createBike(version, body, callback);
+});
 ```
 
 ### Parameters
 
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **version** | **String**| api version | 
- **body** | [**CreateBikeRequestBody**](CreateBikeRequestBody.md)| create bike body parameters | 
+ **body** | [**CreateBikeRequest**](CreateBikeRequest.md)| create bike body parameters | 
 
 ### Return type
 

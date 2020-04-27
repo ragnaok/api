@@ -22,6 +22,12 @@ Then install it via:
 npm install api --save
 ```
 
+Finally, you need to build the module:
+
+```shell
+npm run build
+```
+
 ##### Local development
 
 To use the library locally without publishing to a remote npm registry, first install the dependencies by changing into the directory containing `package.json` (and this README). Let's call this `JAVASCRIPT_CLIENT_DIR`. Then run:
@@ -36,17 +42,21 @@ Next, [link](https://docs.npmjs.com/cli/link) it globally in npm with the follow
 npm link
 ```
 
-Finally, switch to the directory you want to use your api from, and run:
+To use the link you just defined in your project, switch to the directory you want to use your api from, and run:
 
 ```shell
 npm link /path/to/<JAVASCRIPT_CLIENT_DIR>
 ```
 
-You should now be able to `require('api')` in javascript files from the directory you ran the last command above from.
+Finally, you need to build the module:
 
-### git
+```shell
+npm run build
+```
 
-If the library is hosted at a git repository, e.g. https://github.com/GIT_USER_ID/GIT_REPO_ID
+#### git
+
+If the library is hosted at a git repository, e.g.https://github.com/GIT_USER_ID/GIT_REPO_ID
 then install it via:
 
 ```shell
@@ -55,7 +65,9 @@ then install it via:
 
 ### For browser
 
-The library also works in the browser environment via npm and [browserify](http://browserify.org/). After following the above steps with Node.js and installing browserify with `npm install -g browserify`, perform the following (assuming *main.js* is your entry file, that's to say your javascript file where you actually use this library):
+The library also works in the browser environment via npm and [browserify](http://browserify.org/). After following
+the above steps with Node.js and installing browserify with `npm install -g browserify`,
+perform the following (assuming *main.js* is your entry file):
 
 ```shell
 browserify main.js > bundle.js
@@ -97,8 +109,7 @@ Authorization.apiKey = "YOUR API KEY"
 
 var api = new Api.BikeApi()
 var version = "version_example"; // {String} api version
-var body = new Api.CreateBikeRequestBody(); // {CreateBikeRequestBody} create bike body parameters
-
+var body = new Api.CreateBikeRequest(); // {CreateBikeRequest} create bike body parameters
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -112,12 +123,14 @@ api.createBike(version, body, callback);
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://localhost:5000*
+All URIs are relative to *https://api-dev-hst.hylink.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *Api.BikeApi* | [**createBike**](docs/BikeApi.md#createBike) | **POST** /{version}/bike | 
+*Api.BikeBundleApi* | [**queryBikeBundle**](docs/BikeBundleApi.md#queryBikeBundle) | **GET** /{version}/bike/bundles | 
 *Api.CustomerApi* | [**getCustomer**](docs/CustomerApi.md#getCustomer) | **GET** /{version}/customer/{customer_id} | 
+*Api.FirmwareApi* | [**getFirmwareFile**](docs/FirmwareApi.md#getFirmwareFile) | **GET** /{version}/firmware/{firmware_id}/files | 
 *Api.FirmwareApi* | [**queryFirmwareList**](docs/FirmwareApi.md#queryFirmwareList) | **GET** /{version}/firmware | 
 *Api.MessageGatewayApi* | [**getMessageGateway**](docs/MessageGatewayApi.md#getMessageGateway) | **GET** /{version}/message_gateway/version | 
 *Api.PartApi* | [**createPart**](docs/PartApi.md#createPart) | **POST** /{version}/part | 
@@ -129,24 +142,28 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [Api.CompareBikeRequestBody](docs/CompareBikeRequestBody.md)
+ - [Api.BikeBundle](docs/BikeBundle.md)
+ - [Api.CompareBikeRequest](docs/CompareBikeRequest.md)
  - [Api.CompareQwicBikeResponse](docs/CompareQwicBikeResponse.md)
  - [Api.CompareQwicBikeResponseResult](docs/CompareQwicBikeResponseResult.md)
  - [Api.CreateBike](docs/CreateBike.md)
- - [Api.CreateBikeRequestBody](docs/CreateBikeRequestBody.md)
+ - [Api.CreateBikeRequest](docs/CreateBikeRequest.md)
  - [Api.CreateBikeResponse](docs/CreateBikeResponse.md)
  - [Api.Customer](docs/Customer.md)
- - [Api.CustomerResponseBody](docs/CustomerResponseBody.md)
+ - [Api.CustomerResponse](docs/CustomerResponse.md)
  - [Api.Firmware](docs/Firmware.md)
+ - [Api.FirmwareFile](docs/FirmwareFile.md)
+ - [Api.GetFirmwareFileResponse](docs/GetFirmwareFileResponse.md)
  - [Api.MessageGatewayResponse](docs/MessageGatewayResponse.md)
  - [Api.MessageGatewayResponseResult](docs/MessageGatewayResponseResult.md)
  - [Api.Part](docs/Part.md)
  - [Api.PartMeta](docs/PartMeta.md)
- - [Api.PartRequestBody](docs/PartRequestBody.md)
- - [Api.PartResponseBody](docs/PartResponseBody.md)
+ - [Api.PartRequest](docs/PartRequest.md)
+ - [Api.PartResponse](docs/PartResponse.md)
  - [Api.PartSpec](docs/PartSpec.md)
- - [Api.PartSpecResponseBody](docs/PartSpecResponseBody.md)
- - [Api.QueryFirmwareResponseBody](docs/QueryFirmwareResponseBody.md)
+ - [Api.PartSpecResponse](docs/PartSpecResponse.md)
+ - [Api.QueryBikeBundleResponse](docs/QueryBikeBundleResponse.md)
+ - [Api.QueryFirmwareResponse](docs/QueryFirmwareResponse.md)
  - [Api.QwicBikeModel](docs/QwicBikeModel.md)
  - [Api.QwicBikeModelResponse](docs/QwicBikeModelResponse.md)
 
