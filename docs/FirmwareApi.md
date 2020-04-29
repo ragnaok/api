@@ -15,32 +15,34 @@ Method | HTTP request | Description
 
 
 
-get firmware file
+Get firmware file
 
 ### Example
 
 ```javascript
-import Api from 'api';
-let defaultClient = Api.ApiClient.instance;
+var Api = require('api');
+var defaultClient = Api.ApiClient.instance;
 // Configure API key authorization: Authorization
-let Authorization = defaultClient.authentications['Authorization'];
+var Authorization = defaultClient.authentications['Authorization'];
 Authorization.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Authorization.apiKeyPrefix = 'Token';
 
-let apiInstance = new Api.FirmwareApi();
-let version = "version_example"; // String | api version
-let firmwareId = 56; // Number | firmware id
-apiInstance.getFirmwareFile(version, firmwareId, (error, data, response) => {
+var apiInstance = new Api.FirmwareApi();
+var version = "version_example"; // String | api version
+var firmwareId = 56; // Number | firmware id
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.getFirmwareFile(version, firmwareId, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes
@@ -73,28 +75,30 @@ Query firmware list
 ### Example
 
 ```javascript
-import Api from 'api';
-let defaultClient = Api.ApiClient.instance;
+var Api = require('api');
+var defaultClient = Api.ApiClient.instance;
 // Configure API key authorization: Authorization
-let Authorization = defaultClient.authentications['Authorization'];
+var Authorization = defaultClient.authentications['Authorization'];
 Authorization.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Authorization.apiKeyPrefix = 'Token';
 
-let apiInstance = new Api.FirmwareApi();
-let version = "version_example"; // String | api version
-let partNum = "partNum_example"; // String | part number
-let fwVer = "fwVer_example"; // String | firmware version
-apiInstance.queryFirmwareList(version, partNum, fwVer, (error, data, response) => {
+var apiInstance = new Api.FirmwareApi();
+var version = "version_example"; // String | api version
+var partNum = "partNum_example"; // String | part number
+var fwVer = "fwVer_example"; // String | firmware version
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.queryFirmwareList(version, partNum, fwVer, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes

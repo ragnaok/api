@@ -14,31 +14,33 @@ Method | HTTP request | Description
 
 
 
-Get message gateway
+Get the latest version of message gateway.
 
 ### Example
 
 ```javascript
-import Api from 'api';
-let defaultClient = Api.ApiClient.instance;
+var Api = require('api');
+var defaultClient = Api.ApiClient.instance;
 // Configure API key authorization: Authorization
-let Authorization = defaultClient.authentications['Authorization'];
+var Authorization = defaultClient.authentications['Authorization'];
 Authorization.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Authorization.apiKeyPrefix = 'Token';
 
-let apiInstance = new Api.MessageGatewayApi();
-let version = "version_example"; // String | api version
-apiInstance.getMessageGateway(version, (error, data, response) => {
+var apiInstance = new Api.MessageGatewayApi();
+var version = "version_example"; // String | api version
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.getMessageGateway(version, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes

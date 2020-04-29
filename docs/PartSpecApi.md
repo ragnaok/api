@@ -14,32 +14,34 @@ Method | HTTP request | Description
 
 
 
-Get a part spec
+It is recognized as a specification to describe part with properties. Each manufactured part in production service should be referred to one part spec.
 
 ### Example
 
 ```javascript
-import Api from 'api';
-let defaultClient = Api.ApiClient.instance;
+var Api = require('api');
+var defaultClient = Api.ApiClient.instance;
 // Configure API key authorization: Authorization
-let Authorization = defaultClient.authentications['Authorization'];
+var Authorization = defaultClient.authentications['Authorization'];
 Authorization.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Authorization.apiKeyPrefix = 'Token';
 
-let apiInstance = new Api.PartSpecApi();
-let version = "version_example"; // String | api version
-let specId = "specId_example"; // String | spec id
-apiInstance.getPartSpec(version, specId, (error, data, response) => {
+var apiInstance = new Api.PartSpecApi();
+var version = "version_example"; // String | api version
+var specId = "specId_example"; // String | spec id
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.getPartSpec(version, specId, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes

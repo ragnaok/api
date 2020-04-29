@@ -22,12 +22,6 @@ Then install it via:
 npm install api --save
 ```
 
-Finally, you need to build the module:
-
-```shell
-npm run build
-```
-
 ##### Local development
 
 To use the library locally without publishing to a remote npm registry, first install the dependencies by changing into the directory containing `package.json` (and this README). Let's call this `JAVASCRIPT_CLIENT_DIR`. Then run:
@@ -42,21 +36,17 @@ Next, [link](https://docs.npmjs.com/cli/link) it globally in npm with the follow
 npm link
 ```
 
-To use the link you just defined in your project, switch to the directory you want to use your api from, and run:
+Finally, switch to the directory you want to use your api from, and run:
 
 ```shell
 npm link /path/to/<JAVASCRIPT_CLIENT_DIR>
 ```
 
-Finally, you need to build the module:
+You should now be able to `require('api')` in javascript files from the directory you ran the last command above from.
 
-```shell
-npm run build
-```
+### git
 
-#### git
-
-If the library is hosted at a git repository, e.g.https://github.com/GIT_USER_ID/GIT_REPO_ID
+If the library is hosted at a git repository, e.g. https://github.com/GIT_USER_ID/GIT_REPO_ID
 then install it via:
 
 ```shell
@@ -65,9 +55,7 @@ then install it via:
 
 ### For browser
 
-The library also works in the browser environment via npm and [browserify](http://browserify.org/). After following
-the above steps with Node.js and installing browserify with `npm install -g browserify`,
-perform the following (assuming *main.js* is your entry file):
+The library also works in the browser environment via npm and [browserify](http://browserify.org/). After following the above steps with Node.js and installing browserify with `npm install -g browserify`, perform the following (assuming *main.js* is your entry file, that's to say your javascript file where you actually use this library):
 
 ```shell
 browserify main.js > bundle.js
@@ -110,6 +98,7 @@ Authorization.apiKey = "YOUR API KEY"
 var api = new Api.BikeApi()
 var version = "version_example"; // {String} api version
 var body = new Api.CreateBikeRequest(); // {CreateBikeRequest} create bike body parameters
+
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -135,9 +124,9 @@ Class | Method | HTTP request | Description
 *Api.MessageGatewayApi* | [**getMessageGateway**](docs/MessageGatewayApi.md#getMessageGateway) | **GET** /{version}/message_gateway/version | 
 *Api.PartApi* | [**createPart**](docs/PartApi.md#createPart) | **POST** /{version}/part | 
 *Api.PartSpecApi* | [**getPartSpec**](docs/PartSpecApi.md#getPartSpec) | **GET** /{version}/part_spec/{spec_id} | 
-*Api.QwicBikeApi* | [**compareQwicBike**](docs/QwicBikeApi.md#compareQwicBike) | **POST** /{version}/bike/compare | 
-*Api.QwicBikeApi* | [**createQwicBike**](docs/QwicBikeApi.md#createQwicBike) | **POST** /{version}/bike/qwic | 
-*Api.QwicBikeApi* | [**getQwicBikeModel**](docs/QwicBikeApi.md#getQwicBikeModel) | **GET** /{version}/bike_model/qwic/{vin} | 
+*Api.QWICBikeApi* | [**compareQwicBike**](docs/QWICBikeApi.md#compareQwicBike) | **POST** /{version}/bike/compare | 
+*Api.QWICBikeApi* | [**createQwicBike**](docs/QWICBikeApi.md#createQwicBike) | **POST** /{version}/bike/qwic | 
+*Api.QWICBikeApi* | [**getQwicBikeModel**](docs/QWICBikeApi.md#getQwicBikeModel) | **GET** /{version}/bike_model/qwic/{vin} | 
 
 
 ## Documentation for Models

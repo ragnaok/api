@@ -14,32 +14,34 @@ Method | HTTP request | Description
 
 
 
-Create part
+Part stands for a feature item in hydrive system such as display, console … drive etc.
 
 ### Example
 
 ```javascript
-import Api from 'api';
-let defaultClient = Api.ApiClient.instance;
+var Api = require('api');
+var defaultClient = Api.ApiClient.instance;
 // Configure API key authorization: Authorization
-let Authorization = defaultClient.authentications['Authorization'];
+var Authorization = defaultClient.authentications['Authorization'];
 Authorization.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Authorization.apiKeyPrefix = 'Token';
 
-let apiInstance = new Api.PartApi();
-let version = "version_example"; // String | api version
-let body = new Api.PartRequest(); // PartRequest | create part body parameters
-apiInstance.createPart(version, body, (error, data, response) => {
+var apiInstance = new Api.PartApi();
+var version = "version_example"; // String | api version
+var body = new Api.PartRequest(); // PartRequest | create part body parameters
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.createPart(version, body, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes

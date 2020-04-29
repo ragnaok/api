@@ -1,12 +1,12 @@
-# Api.QwicBikeApi
+# Api.QWICBikeApi
 
 All URIs are relative to *https://api-dev-hst.hylink.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**compareQwicBike**](QwicBikeApi.md#compareQwicBike) | **POST** /{version}/bike/compare | 
-[**createQwicBike**](QwicBikeApi.md#createQwicBike) | **POST** /{version}/bike/qwic | 
-[**getQwicBikeModel**](QwicBikeApi.md#getQwicBikeModel) | **GET** /{version}/bike_model/qwic/{vin} | 
+[**compareQwicBike**](QWICBikeApi.md#compareQwicBike) | **POST** /{version}/bike/compare | 
+[**createQwicBike**](QWICBikeApi.md#createQwicBike) | **POST** /{version}/bike/qwic | 
+[**getQwicBikeModel**](QWICBikeApi.md#getQwicBikeModel) | **GET** /{version}/bike_model/qwic/{vin} | 
 
 
 
@@ -16,32 +16,34 @@ Method | HTTP request | Description
 
 
 
-Compare a qwic bike
+Compare a QWIC bike, it will check whether the bike&#39;s MID meets the usage regulations. - &#x60;spec_id&#x60;: spec of bike. if didn&#39;t have spec_id, could be **null**. - &#x60;parts&#x60;: bike equipped part specs. only allow parts produced by Hyena or Brose. - There are 5 types:   - Type 1: No changed any part specs   - Type 2: New bike or change all part specs   - Type 3: Have changes part specs   - Type 4: Different bike of components   - Type 5: Wrong part number
 
 ### Example
 
 ```javascript
-import Api from 'api';
-let defaultClient = Api.ApiClient.instance;
+var Api = require('api');
+var defaultClient = Api.ApiClient.instance;
 // Configure API key authorization: Authorization
-let Authorization = defaultClient.authentications['Authorization'];
+var Authorization = defaultClient.authentications['Authorization'];
 Authorization.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Authorization.apiKeyPrefix = 'Token';
 
-let apiInstance = new Api.QwicBikeApi();
-let version = "version_example"; // String | api version
-let body = new Api.CompareBikeRequest(); // CompareBikeRequest | compare qwic bike body parameters
-apiInstance.compareQwicBike(version, body, (error, data, response) => {
+var apiInstance = new Api.QWICBikeApi();
+var version = "version_example"; // String | api version
+var body = new Api.CompareBikeRequest(); // CompareBikeRequest | compare qwic bike body parameters
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.compareQwicBike(version, body, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes
@@ -69,32 +71,34 @@ Name | Type | Description  | Notes
 
 
 
-Create a qwic bike
+Create a QWIC bike. - &#x60;vin&#x60;: frame number of bike. - &#x60;spec_id&#x60;: spec of bike. if didn&#39;t have spec_id, could be **null**. - &#x60;parts&#x60;: bike equipped part specs. only allow parts produced by Hyena or Brose.
 
 ### Example
 
 ```javascript
-import Api from 'api';
-let defaultClient = Api.ApiClient.instance;
+var Api = require('api');
+var defaultClient = Api.ApiClient.instance;
 // Configure API key authorization: Authorization
-let Authorization = defaultClient.authentications['Authorization'];
+var Authorization = defaultClient.authentications['Authorization'];
 Authorization.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Authorization.apiKeyPrefix = 'Token';
 
-let apiInstance = new Api.QwicBikeApi();
-let version = "version_example"; // String | api version
-let body = new Api.CreateBikeRequest(); // CreateBikeRequest | create qwic bike body parameters
-apiInstance.createQwicBike(version, body, (error, data, response) => {
+var apiInstance = new Api.QWICBikeApi();
+var version = "version_example"; // String | api version
+var body = new Api.CreateBikeRequest(); // CreateBikeRequest | create qwic bike body parameters
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.createQwicBike(version, body, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes
@@ -122,32 +126,34 @@ Name | Type | Description  | Notes
 
 
 
-Get a qwic bike model
+Get a QWIC&#39;s bike model from QWIC API
 
 ### Example
 
 ```javascript
-import Api from 'api';
-let defaultClient = Api.ApiClient.instance;
+var Api = require('api');
+var defaultClient = Api.ApiClient.instance;
 // Configure API key authorization: Authorization
-let Authorization = defaultClient.authentications['Authorization'];
+var Authorization = defaultClient.authentications['Authorization'];
 Authorization.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Authorization.apiKeyPrefix = 'Token';
 
-let apiInstance = new Api.QwicBikeApi();
-let version = "version_example"; // String | api version
-let vin = "vin_example"; // String | frame number
-apiInstance.getQwicBikeModel(version, vin, (error, data, response) => {
+var apiInstance = new Api.QWICBikeApi();
+var version = "version_example"; // String | api version
+var vin = "vin_example"; // String | frame number
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.getQwicBikeModel(version, vin, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes

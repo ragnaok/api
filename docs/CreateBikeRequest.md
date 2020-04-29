@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **vin** | **String** |  | 
-**specId** | **Number** |  | 
+**specId** | **Number** |  | [optional] 
 **parts** | [**[PartMeta]**](PartMeta.md) |  | 
 
 
