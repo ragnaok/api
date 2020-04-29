@@ -46,9 +46,9 @@
     /**
      * The base URL against which to resolve every API call's (relative) path.
      * @type {String}
-     * @default https://api-dev-hst.hylink.io
+     * @default http://localhost:5000
      */
-    this.basePath = 'https://api-dev-hst.hylink.io'.replace(/\/+$/, '');
+    this.basePath = 'http://localhost:5000'.replace(/\/+$/, '');
 
     /**
      * The authentication methods to be included for all API calls.
@@ -601,7 +601,7 @@
     exports.hostSettings = function() {
         return [
             {
-              'url': "https://api-dev-hst.hylink.io/",
+              'url': "http://localhost:5000/",
               'description': "No description provided",
             }
       ];

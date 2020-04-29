@@ -1,6 +1,6 @@
 # Api.CustomerApi
 
-All URIs are relative to *https://api-dev-hst.hylink.io*
+All URIs are relative to *http://localhost:5000*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

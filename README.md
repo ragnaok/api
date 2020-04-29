@@ -112,7 +112,7 @@ api.createBike(version, body, callback);
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api-dev-hst.hylink.io*
+All URIs are relative to *http://localhost:5000*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -124,9 +124,9 @@ Class | Method | HTTP request | Description
 *Api.MessageGatewayApi* | [**getMessageGateway**](docs/MessageGatewayApi.md#getMessageGateway) | **GET** /{version}/message_gateway/version | 
 *Api.PartApi* | [**createPart**](docs/PartApi.md#createPart) | **POST** /{version}/part | 
 *Api.PartSpecApi* | [**getPartSpec**](docs/PartSpecApi.md#getPartSpec) | **GET** /{version}/part_spec/{spec_id} | 
-*Api.QWICBikeApi* | [**compareQwicBike**](docs/QWICBikeApi.md#compareQwicBike) | **POST** /{version}/bike/compare | 
-*Api.QWICBikeApi* | [**createQwicBike**](docs/QWICBikeApi.md#createQwicBike) | **POST** /{version}/bike/qwic | 
-*Api.QWICBikeApi* | [**getQwicBikeModel**](docs/QWICBikeApi.md#getQwicBikeModel) | **GET** /{version}/bike_model/qwic/{vin} | 
+*Api.QwicBikeApi* | [**compareQwicBike**](docs/QwicBikeApi.md#compareQwicBike) | **POST** /{version}/bike/compare | 
+*Api.QwicBikeApi* | [**createQwicBike**](docs/QwicBikeApi.md#createQwicBike) | **POST** /{version}/bike/qwic | 
+*Api.QwicBikeApi* | [**getQwicBikeModel**](docs/QwicBikeApi.md#getQwicBikeModel) | **GET** /{version}/bike_model/qwic/{vin} | 
 
 
 ## Documentation for Models

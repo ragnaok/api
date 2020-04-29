@@ -16,12 +16,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/BikeBundle', 'model/CompareBikeRequest', 'model/CompareQwicBikeResponse', 'model/CompareQwicBikeResponseResult', 'model/CreateBike', 'model/CreateBikeRequest', 'model/CreateBikeResponse', 'model/Customer', 'model/CustomerResponse', 'model/Firmware', 'model/FirmwareFile', 'model/GetFirmwareFileResponse', 'model/MessageGatewayResponse', 'model/MessageGatewayResponseResult', 'model/Part', 'model/PartMeta', 'model/PartRequest', 'model/PartResponse', 'model/PartSpec', 'model/PartSpecResponse', 'model/QueryBikeBundleResponse', 'model/QueryFirmwareResponse', 'model/QwicBikeModel', 'model/QwicBikeModelResponse', 'api/BikeApi', 'api/BikeBundleApi', 'api/CustomerApi', 'api/FirmwareApi', 'api/MessageGatewayApi', 'api/PartApi', 'api/PartSpecApi', 'api/QWICBikeApi'], factory);
+    define(['ApiClient', 'model/BikeBundle', 'model/CompareBikeRequest', 'model/CompareQwicBikeResponse', 'model/CompareQwicBikeResponseResult', 'model/CreateBike', 'model/CreateBikeRequest', 'model/CreateBikeResponse', 'model/Customer', 'model/CustomerResponse', 'model/Firmware', 'model/FirmwareFile', 'model/GetFirmwareFileResponse', 'model/MessageGatewayResponse', 'model/MessageGatewayResponseResult', 'model/Part', 'model/PartMeta', 'model/PartRequest', 'model/PartResponse', 'model/PartSpec', 'model/PartSpecResponse', 'model/QueryBikeBundleResponse', 'model/QueryFirmwareResponse', 'model/QwicBikeModel', 'model/QwicBikeModelResponse', 'api/BikeApi', 'api/BikeBundleApi', 'api/CustomerApi', 'api/FirmwareApi', 'api/MessageGatewayApi', 'api/PartApi', 'api/PartSpecApi', 'api/QwicBikeApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/BikeBundle'), require('./model/CompareBikeRequest'), require('./model/CompareQwicBikeResponse'), require('./model/CompareQwicBikeResponseResult'), require('./model/CreateBike'), require('./model/CreateBikeRequest'), require('./model/CreateBikeResponse'), require('./model/Customer'), require('./model/CustomerResponse'), require('./model/Firmware'), require('./model/FirmwareFile'), require('./model/GetFirmwareFileResponse'), require('./model/MessageGatewayResponse'), require('./model/MessageGatewayResponseResult'), require('./model/Part'), require('./model/PartMeta'), require('./model/PartRequest'), require('./model/PartResponse'), require('./model/PartSpec'), require('./model/PartSpecResponse'), require('./model/QueryBikeBundleResponse'), require('./model/QueryFirmwareResponse'), require('./model/QwicBikeModel'), require('./model/QwicBikeModelResponse'), require('./api/BikeApi'), require('./api/BikeBundleApi'), require('./api/CustomerApi'), require('./api/FirmwareApi'), require('./api/MessageGatewayApi'), require('./api/PartApi'), require('./api/PartSpecApi'), require('./api/QWICBikeApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/BikeBundle'), require('./model/CompareBikeRequest'), require('./model/CompareQwicBikeResponse'), require('./model/CompareQwicBikeResponseResult'), require('./model/CreateBike'), require('./model/CreateBikeRequest'), require('./model/CreateBikeResponse'), require('./model/Customer'), require('./model/CustomerResponse'), require('./model/Firmware'), require('./model/FirmwareFile'), require('./model/GetFirmwareFileResponse'), require('./model/MessageGatewayResponse'), require('./model/MessageGatewayResponseResult'), require('./model/Part'), require('./model/PartMeta'), require('./model/PartRequest'), require('./model/PartResponse'), require('./model/PartSpec'), require('./model/PartSpecResponse'), require('./model/QueryBikeBundleResponse'), require('./model/QueryFirmwareResponse'), require('./model/QwicBikeModel'), require('./model/QwicBikeModelResponse'), require('./api/BikeApi'), require('./api/BikeBundleApi'), require('./api/CustomerApi'), require('./api/FirmwareApi'), require('./api/MessageGatewayApi'), require('./api/PartApi'), require('./api/PartSpecApi'), require('./api/QwicBikeApi'));
   }
-}(function(ApiClient, BikeBundle, CompareBikeRequest, CompareQwicBikeResponse, CompareQwicBikeResponseResult, CreateBike, CreateBikeRequest, CreateBikeResponse, Customer, CustomerResponse, Firmware, FirmwareFile, GetFirmwareFileResponse, MessageGatewayResponse, MessageGatewayResponseResult, Part, PartMeta, PartRequest, PartResponse, PartSpec, PartSpecResponse, QueryBikeBundleResponse, QueryFirmwareResponse, QwicBikeModel, QwicBikeModelResponse, BikeApi, BikeBundleApi, CustomerApi, FirmwareApi, MessageGatewayApi, PartApi, PartSpecApi, QWICBikeApi) {
+}(function(ApiClient, BikeBundle, CompareBikeRequest, CompareQwicBikeResponse, CompareQwicBikeResponseResult, CreateBike, CreateBikeRequest, CreateBikeResponse, Customer, CustomerResponse, Firmware, FirmwareFile, GetFirmwareFileResponse, MessageGatewayResponse, MessageGatewayResponseResult, Part, PartMeta, PartRequest, PartResponse, PartSpec, PartSpecResponse, QueryBikeBundleResponse, QueryFirmwareResponse, QwicBikeModel, QwicBikeModelResponse, BikeApi, BikeBundleApi, CustomerApi, FirmwareApi, MessageGatewayApi, PartApi, PartSpecApi, QwicBikeApi) {
   'use strict';
 
   /**
@@ -217,10 +217,10 @@
      */
     PartSpecApi: PartSpecApi,
     /**
-     * The QWICBikeApi service constructor.
-     * @property {module:api/QWICBikeApi}
+     * The QwicBikeApi service constructor.
+     * @property {module:api/QwicBikeApi}
      */
-    QWICBikeApi: QWICBikeApi
+    QwicBikeApi: QwicBikeApi
   };
 
   return exports;

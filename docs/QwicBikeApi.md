@@ -1,12 +1,12 @@
-# Api.QWICBikeApi
+# Api.QwicBikeApi
 
-All URIs are relative to *https://api-dev-hst.hylink.io*
+All URIs are relative to *http://localhost:5000*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**compareQwicBike**](QWICBikeApi.md#compareQwicBike) | **POST** /{version}/bike/compare | 
-[**createQwicBike**](QWICBikeApi.md#createQwicBike) | **POST** /{version}/bike/qwic | 
-[**getQwicBikeModel**](QWICBikeApi.md#getQwicBikeModel) | **GET** /{version}/bike_model/qwic/{vin} | 
+[**compareQwicBike**](QwicBikeApi.md#compareQwicBike) | **POST** /{version}/bike/compare | 
+[**createQwicBike**](QwicBikeApi.md#createQwicBike) | **POST** /{version}/bike/qwic | 
+[**getQwicBikeModel**](QwicBikeApi.md#getQwicBikeModel) | **GET** /{version}/bike_model/qwic/{vin} | 
 
 
 
@@ -29,7 +29,7 @@ Authorization.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Authorization.apiKeyPrefix = 'Token';
 
-var apiInstance = new Api.QWICBikeApi();
+var apiInstance = new Api.QwicBikeApi();
 var version = "version_example"; // String | api version
 var body = new Api.CompareBikeRequest(); // CompareBikeRequest | compare qwic bike body parameters
 var callback = function(error, data, response) {
@@ -84,7 +84,7 @@ Authorization.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Authorization.apiKeyPrefix = 'Token';
 
-var apiInstance = new Api.QWICBikeApi();
+var apiInstance = new Api.QwicBikeApi();
 var version = "version_example"; // String | api version
 var body = new Api.CreateBikeRequest(); // CreateBikeRequest | create qwic bike body parameters
 var callback = function(error, data, response) {
@@ -139,7 +139,7 @@ Authorization.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Authorization.apiKeyPrefix = 'Token';
 
-var apiInstance = new Api.QWICBikeApi();
+var apiInstance = new Api.QwicBikeApi();
 var version = "version_example"; // String | api version
 var vin = "vin_example"; // String | frame number
 var callback = function(error, data, response) {

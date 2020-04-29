@@ -25,20 +25,20 @@
     if (!root.Api) {
       root.Api = {};
     }
-    root.Api.QWICBikeApi = factory(root.Api.ApiClient, root.Api.CompareBikeRequest, root.Api.CompareQwicBikeResponse, root.Api.CreateBikeRequest, root.Api.CreateBikeResponse, root.Api.QwicBikeModelResponse);
+    root.Api.QwicBikeApi = factory(root.Api.ApiClient, root.Api.CompareBikeRequest, root.Api.CompareQwicBikeResponse, root.Api.CreateBikeRequest, root.Api.CreateBikeResponse, root.Api.QwicBikeModelResponse);
   }
 }(this, function(ApiClient, CompareBikeRequest, CompareQwicBikeResponse, CreateBikeRequest, CreateBikeResponse, QwicBikeModelResponse) {
   'use strict';
 
   /**
-   * QWICBike service.
-   * @module api/QWICBikeApi
+   * QwicBike service.
+   * @module api/QwicBikeApi
    * @version 0.0.1
    */
 
   /**
-   * Constructs a new QWICBikeApi. 
-   * @alias module:api/QWICBikeApi
+   * Constructs a new QwicBikeApi. 
+   * @alias module:api/QwicBikeApi
    * @class
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -49,7 +49,7 @@
 
     /**
      * Callback function to receive the result of the compareQwicBike operation.
-     * @callback module:api/QWICBikeApi~compareQwicBikeCallback
+     * @callback module:api/QwicBikeApi~compareQwicBikeCallback
      * @param {String} error Error message, if any.
      * @param {module:model/CompareQwicBikeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -59,7 +59,7 @@
      * Compare a QWIC bike, it will check whether the bike's MID meets the usage regulations. - `spec_id`: spec of bike. if didn't have spec_id, could be **null**. - `parts`: bike equipped part specs. only allow parts produced by Hyena or Brose. - There are 5 types:   - Type 1: No changed any part specs   - Type 2: New bike or change all part specs   - Type 3: Have changes part specs   - Type 4: Different bike of components   - Type 5: Wrong part number
      * @param {String} version api version
      * @param {module:model/CompareBikeRequest} body compare qwic bike body parameters
-     * @param {module:api/QWICBikeApi~compareQwicBikeCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/QwicBikeApi~compareQwicBikeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/CompareQwicBikeResponse}
      */
     this.compareQwicBike = function(version, body, callback) {
@@ -98,7 +98,7 @@
 
     /**
      * Callback function to receive the result of the createQwicBike operation.
-     * @callback module:api/QWICBikeApi~createQwicBikeCallback
+     * @callback module:api/QwicBikeApi~createQwicBikeCallback
      * @param {String} error Error message, if any.
      * @param {module:model/CreateBikeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -108,7 +108,7 @@
      * Create a QWIC bike. - `vin`: frame number of bike. - `spec_id`: spec of bike. if didn't have spec_id, could be **null**. - `parts`: bike equipped part specs. only allow parts produced by Hyena or Brose.
      * @param {String} version api version
      * @param {module:model/CreateBikeRequest} body create qwic bike body parameters
-     * @param {module:api/QWICBikeApi~createQwicBikeCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/QwicBikeApi~createQwicBikeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/CreateBikeResponse}
      */
     this.createQwicBike = function(version, body, callback) {
@@ -147,7 +147,7 @@
 
     /**
      * Callback function to receive the result of the getQwicBikeModel operation.
-     * @callback module:api/QWICBikeApi~getQwicBikeModelCallback
+     * @callback module:api/QwicBikeApi~getQwicBikeModelCallback
      * @param {String} error Error message, if any.
      * @param {module:model/QwicBikeModelResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -157,7 +157,7 @@
      * Get a QWIC's bike model from QWIC API
      * @param {String} version api version
      * @param {String} vin frame number
-     * @param {module:api/QWICBikeApi~getQwicBikeModelCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/QwicBikeApi~getQwicBikeModelCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/QwicBikeModelResponse}
      */
     this.getQwicBikeModel = function(version, vin, callback) {
